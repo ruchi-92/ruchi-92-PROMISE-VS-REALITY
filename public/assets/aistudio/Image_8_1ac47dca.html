@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#45464d",
+        "on-primary-fixed": "#131b2e",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-container": "#e5eeff",
+        "surface": "#f8f9ff",
+        "on-tertiary-fixed-variant": "#005236",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-surface": "#0b1c30",
+        "tertiary-fixed": "#6ffbbe",
+        "on-secondary-fixed-variant": "#003ea8",
+        "outline": "#76777d",
+        "surface-variant": "#d3e4fe",
+        "on-secondary-container": "#fefcff",
+        "on-error": "#ffffff",
+        "surface-tint": "#565e74",
+        "primary-fixed-dim": "#bec6e0",
+        "outline-variant": "#c6c6cd",
+        "secondary-container": "#316bf3",
+        "tertiary": "#000000",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary": "#ffffff",
+        "on-secondary-fixed": "#00174b",
+        "error-container": "#ffdad6",
+        "background": "#f8f9ff",
+        "primary-container": "#131b2e",
+        "on-secondary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "primary-fixed": "#dae2fd",
+        "primary": "#000000",
+        "surface-container-low": "#eff4ff",
+        "secondary-fixed-dim": "#b4c5ff",
+        "inverse-primary": "#bec6e0",
+        "on-tertiary-fixed": "#002113",
+        "on-primary-fixed-variant": "#3f465c",
+        "secondary-fixed": "#dbe1ff",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "inverse-surface": "#213145",
+        "on-background": "#0b1c30",
+        "secondary": "#0051d5",
+        "surface-container-high": "#dce9ff",
+        "on-error-container": "#93000a",
+        "on-primary-container": "#7c839b",
+        "on-tertiary-container": "#009668",
+        "tertiary-container": "#002113",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-sm": "0.5rem",
+        "gutter": "1.5rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "display": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-mobile": ["Inter"],
+        "mono-numeric": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-md": ["Inter"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "mono-numeric": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20"><img alt="PROMISE vs REALITY Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCySKZs9cnoxi3zfy2_3krmzcDotw17QADV-xyt1UEBcFbLCksGvZVGPl9filnK0nPtS-3tlU0668t6rGRByy6aFFXfVyRYofid6FSJML1YZuZFye0a7_HfO-jlABTlkWCW07N2HBHj8nODubQEstJQIarOHwQlyJwBG65ddNFqS1to5-eDqWEj5twnfNOoFiYMfKeP17_VayF_NRB0yA_v3i6LPK0tCWn1XxI0PZfvelgd7gVHI-GP0Q"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight truncate">PROMISE vs REALITY</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight truncate mt-space-xs">Commitment Verification</span></div></div><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">Audit Platform</span></div><nav class="px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-surface-container-low text-secondary font-headline-sm font-semibold"><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Overview</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container-low text-secondary font-headline-sm font-semibold" data-path="verify-a-bill" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Verify a Bill</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-documents" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">My Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="subscriptions" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Subscriptions</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="plan-optimizer" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Plan Optimizer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md">AI Assistant</span></a></nav><div class="my-space-sm mx-space-md border-t border-outline-variant/30"></div><div class="px-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">System &amp; Controls</span></div><nav class="px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-surface-container-low text-secondary font-headline-sm font-semibold"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="activity-and-alerts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-md text-body-md">Activity &amp; Alerts</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-full">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="account-and-privacy" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-body-md text-body-md">Account &amp; Privacy</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGplHOFbjtfYShKjny8J5NdxhLB7rE6nB_9UtFZwiMWTc55Jld-JScS72MIxMvgHxlvk7ZNLODZqgHlliCGCi5o0pk6rBznYOni2mjTwtl4joJzDCaD-QMqCKfbruktwuO3-wccvLyJjjt2-1OgOoM_a2YsqlqPlUOYHpfFDYE4w4uikl-ovKLU-b6sHUU_ISjH4ImqLx2fd3sXHbY3hWOveM72quyiBVSL7VHoUKqTLwoadQsRj8FQ"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Enterprise Auditor</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">audit@consumerpromise.io</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">unfold_more</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">Dashboard</span><span class="font-label-sm text-label-sm text-outline-variant">/</span><span class="font-label-md text-label-md text-on-surface font-semibold">Verify a Bill</span></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-80 h-[38px] pl-9 pr-12 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="Search bills, contracts, or merchants..." type="text"/><kbd class="absolute right-2.5 px-1.5 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-label-sm text-on-surface-variant uppercase">⌘K</kbd></div><span class="font-label-sm text-label-sm tracking-wide bg-surface-container-high text-on-surface px-space-sm py-1 rounded-full border border-outline-variant/50 font-semibold">DEMO ENVIRONMENT</span><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGplHOFbjtfYShKjny8J5NdxhLB7rE6nB_9UtFZwiMWTc55Jld-JScS72MIxMvgHxlvk7ZNLODZqgHlliCGCi5o0pk6rBznYOni2mjTwtl4joJzDCaD-QMqCKfbruktwuO3-wccvLyJjjt2-1OgOoM_a2YsqlqPlUOYHpfFDYE4w4uikl-ovKLU-b6sHUU_ISjH4ImqLx2fd3sXHbY3hWOveM72quyiBVSL7VHoUKqTLwoadQsRj8FQ"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-space-lg py-space-xl max-w-[1360px] mx-auto w-full flex flex-col gap-space-xl">
+<!-- Top Introduction & Engine Integrity Flag -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Automated Audit Protocol</span>
+</div>
+<h1 class="font-display text-display text-on-surface tracking-tight">Verify a Bill</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Compare the original terms with the final charge to detect variances and unfulfilled commitments.
+        </p>
+</div>
+<!-- Trust Indicator Capsule -->
+<div class="inline-flex items-center gap-2 self-start md:self-auto px-3.5 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">
+          Deterministic Reconciliation Engine <span class="text-outline-variant font-normal px-1">•</span> Zero-Knowledge Protocol
+        </span>
+</div>
+</div>
+<!-- Dual File Upload Comparison Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Panel 1: Original Promise -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Source 01</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-0.5 rounded-full font-medium">Baseline Baseline</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Original Promise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Upload an offer, quotation, or order confirmation.</p>
+<!-- Drop Area -->
+<div class="mt-space-sm p-space-lg rounded-xl bg-surface-container-low/40 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-150 group" id="dropzone-promise">
+<input accept=".pdf,.png,.jpg,.jpeg,.webp" class="hidden" id="input-promise" type="file"/>
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:scale-105 transition-all mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">contract</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+              Drag and drop document here, or <span class="text-secondary font-semibold group-hover:underline">Browse files</span>
+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              PDF, PNG, JPG, WEBP (Max 25MB)
+            </p>
+<div class="mt-space-md py-1.5 px-3 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>e.g., Service contract, renewal quotation email, initial price lock agreement.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between">
+<button class="inline-flex items-center gap-1.5 text-secondary hover:text-secondary-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">folder_special</span>
+<span>Select from My Documents Vault</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">Unselected</span>
+</div>
+</div>
+<!-- Panel 2: Actual Outcome -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Source 02</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container text-on-surface px-2.5 py-0.5 rounded-full font-medium">Billed Realization</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Actual Outcome</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Upload the final invoice or bill.</p>
+<!-- Drop Area -->
+<div class="mt-space-sm p-space-lg rounded-xl bg-surface-container-low/40 flex flex-col items-center justify-center text-center cursor-pointer transition-all duration-150 group" id="dropzone-actual">
+<input accept=".pdf,.png,.jpg,.jpeg,.webp" class="hidden" id="input-actual" type="file"/>
+<div class="w-12 h-12 rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-surface-variant group-hover:text-secondary group-hover:scale-105 transition-all mb-space-sm">
+<span class="material-symbols-outlined text-[26px]">receipt_long</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">
+              Drag and drop statement here, or <span class="text-secondary font-semibold group-hover:underline">Browse files</span>
+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">
+              PDF, PNG, JPG, WEBP (Max 25MB)
+            </p>
+<div class="mt-space-md py-1.5 px-3 rounded-md bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>e.g., Credit card statement line item, monthly utility bill, final receipt.</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md flex items-center justify-between">
+<button class="inline-flex items-center gap-1.5 text-secondary hover:text-secondary-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">sync_alt</span>
+<span>Connect utility portal or fetch recent bill</span>
+</button>
+<span class="font-label-sm text-label-sm text-outline">Unselected</span>
+</div>
+</div>
+</div>
+<!-- Primary Verification Action & Secondary Options -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">compare</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ready to audit?</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Reconciliation runs in memory and extracts all matched metadata instantly.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md w-full sm:w-auto justify-end">
+<button class="px-space-md h-[38px] rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-1.5" id="btn-reset" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Reset fields</span>
+</button>
+<button class="px-space-md h-[38px] rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors font-label-md text-label-md flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+<span>Batch compare multiple</span>
+</button>
+<button class="h-[38px] px-space-lg rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-2 group" id="btn-compare" type="button">
+<span>Compare Documents</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Compact Explanation of Verification Scope -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">rule</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">What will be compared</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 automated audit layers enabled</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-sm">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">payments</span>
+<span class="font-label-md text-label-md font-semibold">Prices &amp; Base Rates</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Checks quoted unit tariffs against billed rates and hidden recurring base shifts.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">sell</span>
+<span class="font-label-md text-label-md font-semibold">Discounts &amp; Vouchers</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Confirms introductory rebates, promo codes, bundled credits, and autopay deductions.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">speed</span>
+<span class="font-label-md text-label-md font-semibold">Quantities &amp; Usage</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Audits meter reads, data thresholds, bandwidth limits, and excess usage surcharges.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance</span>
+<span class="font-label-md text-label-md font-semibold">Taxes &amp; Fees</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Calculates statutory levies, recovery fees, GST/VAT accuracy, and municipal line items.
+          </p>
+</div>
+<!-- Pillar 5 -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-1 hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-secondary">calendar_month</span>
+<span class="font-label-md text-label-md font-semibold">Billing Terms &amp; Cadence</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Verifies cycle lengths, renewal deadlines, grace windows, and mid-cycle proration rules.
+          </p>
+</div>
+</div>
+</div>
+<!-- Demonstration Example Card (Simulated Audit Baseline) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<!-- Demo Header Banner -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-sm gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Demonstration Example
+          </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Simulated Audit Baseline</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">science</span>
+<span>Sample reference dataset #EX-8849</span>
+</div>
+</div>
+<!-- Main Comparison Anatomy Metric Block -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-md rounded-xl bg-surface-container-low/60">
+<!-- Original Promised -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+            Original Promise (Baseline)
+          </span>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface font-mono-numeric">₹999</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Quoted Plan Subscription Rate</span>
+</div>
+<!-- Actual Reality -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container-lowest rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+            Delivered Reality (Invoiced)
+          </span>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface font-mono-numeric">₹1,199</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ month</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Statement Cycle Final Charge</span>
+</div>
+<!-- Net Variance -->
+<div class="flex flex-col gap-1 p-space-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Net Variance</span>
+<span class="px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-high text-on-surface">
+              Attention Needed
+            </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display text-on-surface font-mono-numeric">+₹200</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">(+20.02%)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Missing Discount Offset Detected</span>
+</div>
+</div>
+<!-- Detail Narrative & Context -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-md py-space-xs">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Context Sample</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+            Apex Fiber 300 Mbps Plan — Promotional tier quoted at <strong class="text-on-surface font-semibold">₹999/mo</strong>, billed at <strong class="text-on-surface font-semibold">₹1,199</strong> without the applied ₹200 introductory voucher.
+          </p>
+</div>
+<div class="shrink-0">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Inspect Simulated Breakdown</span>
+</button>
+</div>
+</div>
+<!-- Advisory Clarification Note -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Important Audit Guidance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            A difference requires review and is not automatically proof of wrongdoing. Variances may stem from unapplied promotions, mid-cycle prorations, or updated local regulatory fees. Always verify line-item breakdowns prior to disputing.
+          </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const dropPromise = document.getElementById('dropzone-promise');
+    const inputPromise = document.getElementById('input-promise');
+    const dropActual = document.getElementById('dropzone-actual');
+    const inputActual = document.getElementById('input-actual');
+    const btnReset = document.getElementById('btn-reset');
+    const btnCompare = document.getElementById('btn-compare');
+
+    function wireDropzone(zone, input) {
+      if (!zone || !input) return;
+      zone.addEventListener('click', () => input.click());
+
+      zone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        zone.classList.add('bg-surface-container');
+      });
+
+      ['dragleave', 'dragend'].forEach(evt => {
+        zone.addEventListener(evt, () => {
+          zone.classList.remove('bg-surface-container');
+        });
+      });
+
+      zone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        zone.classList.remove('bg-surface-container');
+        if (e.dataTransfer.files.length) {
+          handleFile(zone, e.dataTransfer.files[0]);
+        }
+      });
+
+      input.addEventListener('change', () => {
+        if (input.files.length) {
+          handleFile(zone, input.files[0]);
+        }
+      });
+    }
+
+    function handleFile(zone, file) {
+      const titleElem = zone.querySelector('p');
+      if (titleElem) {
+        titleElem.innerHTML = `<span class="text-on-surface font-semibold">${file.name}</span> <span class="text-secondary font-label-sm">(${(file.size / (1024*1024)).toFixed(2)} MB)</span>`;
+      }
+    }
+
+    wireDropzone(dropPromise, inputPromise);
+    wireDropzone(dropActual, inputActual);
+
+    if (btnReset) {
+      btnReset.addEventListener('click', () => {
+        if (inputPromise) inputPromise.value = '';
+        if (inputActual) inputActual.value = '';
+        const p1 = dropPromise ? dropPromise.querySelector('p') : null;
+        const p2 = dropActual ? dropActual.querySelector('p') : null;
+        if (p1) p1.innerHTML = 'Drag and drop document here, or <span class="text-secondary font-semibold group-hover:underline">Browse files</span>';
+        if (p2) p2.innerHTML = 'Drag and drop statement here, or <span class="text-secondary font-semibold group-hover:underline">Browse files</span>';
+      });
+    }
+
+    if (btnCompare) {
+      btnCompare.addEventListener('click', () => {
+        btnCompare.classList.add('opacity-80');
+        const originalText = btnCompare.innerHTML;
+        btnCompare.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Reconciling...</span>';
+        setTimeout(() => {
+          btnCompare.innerHTML = originalText;
+          btnCompare.classList.remove('opacity-80');
+        }, 1200);
+      });
+    }
+  })();
+</script></main></div>
+</body></html>

@@ -1,0 +1,229 @@
+---
+name: Objective Verification Engine
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#45464d'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#76777d'
+  outline-variant: '#c6c6cd'
+  surface-tint: '#565e74'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#131b2e'
+  on-primary-container: '#7c839b'
+  inverse-primary: '#bec6e0'
+  secondary: '#0051d5'
+  on-secondary: '#ffffff'
+  secondary-container: '#316bf3'
+  on-secondary-container: '#fefcff'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#002113'
+  on-tertiary-container: '#009668'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dae2fd'
+  primary-fixed-dim: '#bec6e0'
+  on-primary-fixed: '#131b2e'
+  on-primary-fixed-variant: '#3f465c'
+  secondary-fixed: '#dbe1ff'
+  secondary-fixed-dim: '#b4c5ff'
+  on-secondary-fixed: '#00174b'
+  on-secondary-fixed-variant: '#003ea8'
+  tertiary-fixed: '#6ffbbe'
+  tertiary-fixed-dim: '#4edea3'
+  on-tertiary-fixed: '#002113'
+  on-tertiary-fixed-variant: '#005236'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  display:
+    fontFamily: Inter
+    fontSize: 36px
+    fontWeight: '600'
+    lineHeight: 44px
+    letterSpacing: -0.025em
+  display-mobile:
+    fontFamily: Inter
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.02em
+  headline-md:
+    fontFamily: Inter
+    fontSize: 20px
+    fontWeight: '600'
+    lineHeight: 28px
+    letterSpacing: -0.015em
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '600'
+    lineHeight: 24px
+    letterSpacing: -0.01em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+    letterSpacing: -0.005em
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '400'
+    lineHeight: 18px
+    letterSpacing: 0.005em
+  label-md:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 16px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  mono-numeric:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '500'
+    lineHeight: 20px
+    letterSpacing: -0.01em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-mobile: 1rem
+  margin: 2rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+The design system embodies calculated precision, institutional credibility, and calm authority. Built for enterprise and consumer transparency, the visual language avoids ornamentation, flashy gradients, or artificial glass effects. Instead, it relies on structural clarity, crisp alignment, deliberate whitespace, and rigorous information architecture reminiscent of high-end analytical instruments and Apple-inspired executive tooling.
+
+The interface prioritizes instant legibility and auditability:
+- **Tone:** Objective, measured, highly competent, reliable.
+- **Aesthetic Movement:** Modern Precision Minimalism with tactile structural boundaries.
+- **Visual Weight:** Ultra-clean flat surfaces layered with microscopic 1px hairline rules, crisp tabular metrics, and restrained chromatic signaling.
+
+## Colors
+
+The palette operates on high-contrast semantic discipline against an ultra-light gray architectural canvas. Color is treated strictly as data or direct affordance, never as decorative background filler.
+
+### Palette Architecture
+- **Canvas (`#F8F9FB`):** Ground level providing high perceived contrast for pure white modules.
+- **Surface / Card (`#FFFFFF`):** Base layer for interactive cards, data tables, and modal elements.
+- **Structural Hairlines (`#E2E8F0` / `#E5E7EB`):** Border definition separating data matrices without visual mass.
+- **Subdued & Interactive Hover (`#F1F5F9` / `#F8FAFC`):** Micro-interactions, table row hovers, and segment controls.
+- **Primary Ink (`#0F172A`):** Deep Navy/Slate-900 anchor for headlines, critical data points, and terminal metrics.
+- **Secondary Ink (`#64748B`):** Muted Slate-500 for supporting labels, meta-values, and tabular headers.
+- **Action Accent (`#2563EB` / Active: `#1D4ED8`):** Restrained blue reserved exclusively for primary execution buttons, focus rings, and selection indicators.
+
+### Semantic Status Pairs
+- **Verified / Compliant:** Text & Icon `#059669`, Badge Surface `#ECFDF5`, Border `#A7F3D0`.
+- **Variance / Discrepancy (Warning):** Text & Icon `#D97706`, Badge Surface `#FEF3C7`, Border `#FDE68A`.
+- **Breach / Failed:** Text & Icon `#DC2626`, Badge Surface `#FEF2F2`, Border `#FECACA`.
+
+## Typography
+
+The type system utilizes `Inter` configured with strict OpenType feature settings: `tnum` (tabular figures), `cv05` (lowercase l with tail), and `zero` (slashed zero) where numerical clarity is paramount.
+
+- **Tracking:** Headlines require tight negative letter spacing (`-0.02em` to `-0.01em`) to create a compact, executive feel. Small labels (`label-sm`) require uppercase rendering with expanded tracking (`+0.04em`) to ensure scanning legibility.
+- **Tabular Alignment:** All comparison matrices, currency figures, SLA timestamps, and percentage deltas must enforce tabular figures (`font-variant-numeric: tabular-nums`) to prevent horizontal jitter during real-time status updates.
+
+## Layout & Spacing
+
+The layout is built on a structured 12-column responsive grid underpinned by an uncompromising 4px/8px incremental spacing scale.
+
+### Grid & Breakpoints
+- **Desktop (≥ 1280px):** 12 columns, fixed sidebar at `260px` or `280px`, content canvas max-width `1440px`, centered, `margin: 2rem` (32px), `gutter: 1.5rem` (24px).
+- **Tablet (768px – 1279px):** 8 columns, collapsible sidebar to icon rail (64px), `margin: 1.5rem` (24px), `gutter: 1rem` (16px).
+- **Mobile (< 768px):** 4 columns, full-width fluid cards, `margin: 1rem` (16px), `gutter: 1rem` (16px), persistent top header and bottom drawer navigation.
+
+### Rhythmic Discipline
+Section headers and card headers maintain `space-md` (16px) separation from child content. Internal card padding is consistently `space-lg` (24px) on desktop, reducing to `space-md` (16px) on mobile viewports.
+
+## Elevation & Depth
+
+Visual hierarchy is communicated through planar layering and crisp 1px borders rather than heavy atmospheric drops. The elevation model is strictly architectural:
+
+1. **Level 0 (Base Floor):** `#F8F9FB` canvas. Flat, inert.
+2. **Level 1 (Card / Container):** Pure `#FFFFFF` surface enclosed in a 1px solid `#E2E8F0` border. Ambient drop shadow is near-invisible: `0 1px 2px 0 rgba(15, 23, 42, 0.03)`.
+3. **Level 2 (Hover / Active Cards / Menus):** Pure `#FFFFFF` surface, border adjusted to `#CBD5E1`, with subtle elevation: `0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.03)`.
+4. **Level 3 (Modals / Overlays):** Raised `#FFFFFF` surface with crisp border `#E2E8F0` and deep soft ambient occlusion: `0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.03)`. Backdrop is dimmed using `rgba(15, 23, 42, 0.3)` without blur.
+
+## Shapes
+
+The design system employs a refined geometric envelope matching modern device hardware standards (10px to 14px for primary components). 
+
+- **Primary Cards & Containers:** `12px` (`0.75rem`) border radius creates an intentional, modern container shape without veering into overly playful geometry.
+- **Inputs, Buttons & Dropdowns:** `8px` (`0.5rem`) for compact, reliable click targets.
+- **Pills & Status Indicators:** `9999px` (fully rounded) reserved strictly for verification badges, progress tags, and micro-counters to differentiate indicators from actionable cards.
+
+## Components
+
+### Buttons
+- **Primary:** Background `#0F172A`, text `#FFFFFF`, border `none`, hover background `#1E293B`, height `38px`, padding `0 16px`, corner radius `8px`. Focus ring: 2px offset with `#2563EB`.
+- **Secondary:** Background `#FFFFFF`, text `#0F172A`, border `1px solid #E2E8F0`, hover background `#F8FAFC`, height `38px`, padding `0 16px`, corner radius `8px`.
+- **Accent / Action:** Background `#2563EB`, text `#FFFFFF`, hover background `#1D4ED8`.
+
+### Status Badges & Chips
+- Compact horizontal layouts: height `22px`, padding `0 8px`, font size `11px`, weight `600`, radius `9999px`.
+- Consists of an optional 6px circular dot indicator on the leading edge.
+- **Verified:** Background `#ECFDF5`, text `#065F46`, border `1px solid #A7F3D0`.
+- **Discrepancy:** Background `#FEF3C7`, text `#92400E`, border `1px solid #FDE68A`.
+- **Pending/Neutral:** Background `#F1F5F9`, text `#475569`, border `1px solid #E2E8F0`.
+
+### Data Cards & Comparison Panels
+- Background `#FFFFFF`, 1px border `#E2E8F0`, radius `12px`, padding `24px`.
+- **Split Metric Blocks:** Side-by-side comparison of "Consumer Promise" vs. "Delivered Reality" divided by a 1px vertical hairline rule (`#E2E8F0`) with contextual delta tags positioned above the metric.
+
+### Tables & Data Grid
+- Row height `44px` (dense) to `52px` (standard).
+- Table header: uppercase `11px`, letter-spacing `0.04em`, text `#64748B`, background `#F8FAFC`, border-bottom `1px solid #E2E8F0`.
+- Row cells: text `#0F172A`, border-bottom `1px solid #F1F5F9`, hover background `#F8FAFC`. All numeric data right-aligned with `tnum` font features.
+
+### Inputs & Selectors
+- Height `38px`, background `#FFFFFF`, border `1px solid #CBD5E1`, radius `8px`, padding `0 12px`, text `#0F172A`.
+- Placeholder text `#94A3B8`. Focus state: border `#2563EB`, box-shadow `0 0 0 1px #2563EB`.
+- Checkboxes: `16px x 16px`, border `1px solid #CBD5E1`, radius `4px`, checked fill `#2563EB`.
+
+### Specialized Verification Timeline
+- Segmented progress bar depicting contract fulfillment milestones: 4px track height, inactive track `#E2E8F0`, verified fill `#10B981`, variance fill `#F59E0B`.

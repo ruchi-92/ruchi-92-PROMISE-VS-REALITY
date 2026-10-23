@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "on-surface-variant": "#45464d",
+        "on-primary-fixed": "#131b2e",
+        "inverse-on-surface": "#eaf1ff",
+        "surface-container": "#e5eeff",
+        "surface": "#f8f9ff",
+        "on-tertiary-fixed-variant": "#005236",
+        "tertiary-fixed-dim": "#4edea3",
+        "on-surface": "#0b1c30",
+        "tertiary-fixed": "#6ffbbe",
+        "on-secondary-fixed-variant": "#003ea8",
+        "outline": "#76777d",
+        "surface-variant": "#d3e4fe",
+        "on-secondary-container": "#fefcff",
+        "on-error": "#ffffff",
+        "surface-tint": "#565e74",
+        "primary-fixed-dim": "#bec6e0",
+        "outline-variant": "#c6c6cd",
+        "secondary-container": "#316bf3",
+        "tertiary": "#000000",
+        "surface-container-highest": "#d3e4fe",
+        "on-tertiary": "#ffffff",
+        "on-secondary-fixed": "#00174b",
+        "error-container": "#ffdad6",
+        "background": "#f8f9ff",
+        "primary-container": "#131b2e",
+        "on-secondary": "#ffffff",
+        "surface-dim": "#cbdbf5",
+        "primary-fixed": "#dae2fd",
+        "primary": "#000000",
+        "surface-container-low": "#eff4ff",
+        "secondary-fixed-dim": "#b4c5ff",
+        "inverse-primary": "#bec6e0",
+        "on-tertiary-fixed": "#002113",
+        "on-primary-fixed-variant": "#3f465c",
+        "secondary-fixed": "#dbe1ff",
+        "on-primary": "#ffffff",
+        "surface-container-lowest": "#ffffff",
+        "inverse-surface": "#213145",
+        "on-background": "#0b1c30",
+        "secondary": "#0051d5",
+        "surface-container-high": "#dce9ff",
+        "on-error-container": "#93000a",
+        "on-primary-container": "#7c839b",
+        "on-tertiary-container": "#009668",
+        "tertiary-container": "#002113",
+        "error": "#ba1a1a",
+        "surface-bright": "#f8f9ff"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "gutter-mobile": "1rem",
+        "space-xl": "2rem",
+        "space-lg": "1.5rem",
+        "margin": "2rem",
+        "space-sm": "0.5rem",
+        "gutter": "1.5rem",
+        "margin-mobile": "1rem",
+        "space-md": "1rem",
+        "space-xs": "0.25rem"
+      },
+      "fontFamily": {
+        "display": ["Inter"],
+        "headline-lg": ["Inter"],
+        "display-mobile": ["Inter"],
+        "mono-numeric": ["Inter"],
+        "body-sm": ["Inter"],
+        "headline-sm": ["Inter"],
+        "label-md": ["Inter"],
+        "body-lg": ["Inter"],
+        "label-sm": ["Inter"],
+        "headline-md": ["Inter"],
+        "body-md": ["Inter"]
+      },
+      "fontSize": {
+        "display": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "600"}],
+        "headline-lg": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "display-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+        "mono-numeric": ["14px", {"lineHeight": "20px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+        "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400"}],
+        "headline-sm": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+        "label-md": ["13px", {"lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+        "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+        "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+        "headline-md": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+        "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}]
+      }
+    }
+  }
+}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-[260px] bg-surface-container-lowest border-r border-outline-variant/30 z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm border-b border-outline-variant/20"><img alt="PROMISE vs REALITY Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCySKZs9cnoxi3zfy2_3krmzcDotw17QADV-xyt1UEBcFbLCksGvZVGPl9filnK0nPtS-3tlU0668t6rGRByy6aFFXfVyRYofid6FSJML1YZuZFye0a7_HfO-jlABTlkWCW07N2HBHj8nODubQEstJQIarOHwQlyJwBG65ddNFqS1to5-eDqWEj5twnfNOoFiYMfKeP17_VayF_NRB0yA_v3i6LPK0tCWn1XxI0PZfvelgd7gVHI-GP0Q"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight truncate">PROMISE vs REALITY</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight truncate mt-space-xs">Commitment Verification</span></div></div><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">Audit Platform</span></div><nav class="px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-surface-container-low text-secondary font-headline-sm font-semibold"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg transition-colors bg-surface-container-low text-secondary font-headline-sm font-semibold" data-path="overview" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="verify-a-bill" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">Verify a Bill</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-documents" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span class="font-body-md text-body-md">My Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="subscriptions" href="#"><span class="material-symbols-outlined text-[20px]">sync_alt</span><span class="font-body-md text-body-md">Subscriptions</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="plan-optimizer" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-body-md text-body-md">Plan Optimizer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md">AI Assistant</span></a></nav><div class="my-space-sm mx-space-md border-t border-outline-variant/30"></div><div class="px-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider px-space-sm">System &amp; Controls</span></div><nav class="px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-surface-container-low text-secondary font-headline-sm font-semibold"><a class="flex items-center justify-between px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="activity-and-alerts" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">notifications_active</span><span class="font-body-md text-body-md">Activity &amp; Alerts</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-space-xs py-0.5 rounded-full">3</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="account-and-privacy" href="#"><span class="material-symbols-outlined text-[20px]">security</span><span class="font-body-md text-body-md">Account &amp; Privacy</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md">Settings</span></a></nav></div><div class="p-space-md border-t border-outline-variant/30 bg-surface-container-low/40"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIGplHOFbjtfYShKjny8J5NdxhLB7rE6nB_9UtFZwiMWTc55Jld-JScS72MIxMvgHxlvk7ZNLODZqgHlliCGCi5o0pk6rBznYOni2mjTwtl4joJzDCaD-QMqCKfbruktwuO3-wccvLyJjjt2-1OgOoM_a2YsqlqPlUOYHpfFDYE4w4uikl-ovKLU-b6sHUU_ISjH4ImqLx2fd3sXHbY3hWOveM72quyiBVSL7VHoUKqTLwoadQsRj8FQ"/><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface font-semibold truncate">Enterprise Auditor</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">audit@consumerpromise.io</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">unfold_more</span></div></div></aside><div class="pl-[260px]"><header class="fixed top-0 left-[260px] right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-label-md text-label-md text-on-surface-variant">Dashboard</span><span class="font-label-sm text-label-sm text-outline-variant">/</span><span class="font-label-md text-label-md text-on-surface font-semibold">Overview</span></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-80 h-[38px] pl-9 pr-12 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="Search bills, contracts, or merchants..." type="text"/><kbd class="absolute right-2.5 px-1.5 py-0.5 bg-surface-container-low border border-outline-variant/60 rounded font-label-sm text-label-sm text-on-surface-variant uppercase">⌘K</kbd></div><span class="font-label-sm text-label-sm tracking-wide bg-surface-container-high text-on-surface px-space-sm py-1 rounded-full border border-outline-variant/50 font-semibold">DEMO ENVIRONMENT</span><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-secondary-container ring-2 ring-surface-container-lowest"></span></button><div class="flex items-center pl-space-xs"><img alt="Enterprise Auditor avatar - Indian woman" class="w-8 h-8 rounded-full object-cover ring-1 ring-outline-variant/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBF6SGBj_lh-JiwPlyYtoBpwnVixWMkO1s22wMzwTM46Tfp-ia0dbnksJwoTffR7G6IwRiSv-dVCvQEkItvb2-YzWem_ch22z_rf6fdFnMX1IvB9Lguu024hsLaT9hJ8hjOcz45RsXnV7HgS8KrqoKULhe5tcrLfJ0IzE2rtGpXQMVNuPDYTf6hJG2MGY7WTG0ZSWOi0FzicBxkU9KlrJW-gQybRsQKa1UtsxCAdKmOi7WRlHkgHNoAIQ"/></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="max-w-[1400px] mx-auto p-space-xl"><div class="flex flex-col w-full"><!-- Subtle Environment & Global Notice Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-lg pb-space-sm border-b border-outline-variant/30">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/40">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium tracking-normal">
+      Showing demonstration data — no live financial accounts connected
+    </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+      Audit Engine v2.4 Active
+    </span>
+<span class="text-outline-variant">|</span>
+<span class="">Last sync: Today at 09:42 EST</span>
+</div>
+</div>
+<!-- Hero Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col max-w-2xl">
+<div class="inline-flex items-center gap-1.5 text-secondary font-label-sm text-label-sm font-semibold tracking-wider uppercase mb-1">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+      Automated Contract Auditing
+    </div>
+<h1 class="font-display text-display text-on-surface tracking-tight font-semibold">
+      Know what you were promised.
+    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-1.5 leading-relaxed">
+      Verify charges, track contractual commitments, and surface unexpected discrepancies before payment cycles close.
+    </p>
+</div>
+<!-- Action Toolbar -->
+<div class="flex items-center gap-space-sm shrink-0 self-start lg:self-center">
+<button class="inline-flex items-center justify-center gap-2 h-9 px-4 rounded-xl bg-surface-container-lowest border border-outline-variant/60 font-label-md text-label-md text-on-surface hover:bg-surface-container-low hover:border-outline transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">upload_file</span>
+<span class="">Upload Document</span>
+</button>
+<button class="inline-flex items-center justify-center gap-2 h-9 px-4 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm group" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed transition-transform group-hover:scale-110">add_moderator</span>
+<span class="">Verify a Bill</span>
+</button>
+</div>
+</div>
+<!-- 4-Column Metric Summary Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-xl">
+<!-- Card 1: Documents Analyzed -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm hover:border-outline-variant transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-secondary font-medium border border-outline-variant/30">
+        +4 this month
+      </span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight tabular-nums">
+        28
+      </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium mt-0.5">
+        Documents Analyzed
+      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 flex items-center gap-1.5">
+<span class="">12 statements</span>
+<span class="text-outline-variant">•</span>
+<span class="">16 contracts</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Items Requiring Review -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm hover:border-outline-variant transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-error-container/50 text-on-error-container font-semibold border border-error-container">
+        Attention Needed
+      </span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-error font-semibold tracking-tight tabular-nums">
+        2
+      </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium mt-0.5">
+        Items Requiring Review
+      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+        Potential rate changes detected
+      </div>
+</div>
+</div>
+<!-- Card 3: Upcoming Renewals -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm hover:border-outline-variant transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">event_repeat</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-surface-variant font-medium border border-outline-variant/30">
+        Within 30 days
+      </span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight tabular-nums">
+        5
+      </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium mt-0.5">
+        Upcoming Renewals
+      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 truncate">
+        Next: Cloud Storage on Nov 18
+      </div>
+</div>
+</div>
+<!-- Card 4: Active Subscriptions -->
+<div class="bg-surface-container-lowest rounded-xl p-5 border border-outline-variant/40 shadow-sm hover:border-outline-variant transition-all flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full font-label-sm text-label-sm bg-surface-container-low text-on-tertiary-container font-semibold border border-outline-variant/30">
+        100% audited
+      </span>
+</div>
+<div class="mt-4">
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight tabular-nums">
+        14
+      </div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-medium mt-0.5">
+        Active Subscriptions
+      </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-1 tabular-nums">
+        $342.50 / mo verified baseline
+      </div>
+</div>
+</div>
+</div>
+<!-- Priority Section: Needs Your Attention -->
+<section class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">
+          Needs Your Attention
+        </h2>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+          2
+        </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+        Potential discrepancy found between agreed contract terms and recent invoice billings.
+      </p>
+</div>
+<div class="hidden sm:flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-outline">tune</span>
+<span class="">Sorted by financial variance impact</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Discrepancy Card 1: CloudFiber Broadband -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 shadow-sm overflow-hidden transition-all hover:border-outline-variant">
+<div class="p-5 lg:p-6">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<!-- Header & Context -->
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container/50 text-on-error-container border border-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Potential Discrepancy
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Home Broadband &amp; Fiber</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface-variant font-mono">Invoice #INV-9942</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+              CloudFiber Broadband — Subscription renewal rate exceeded promotional lock-in
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-4xl leading-relaxed">
+              The 24-month promotional guarantee contract submitted in January 2024 states an explicit price lock through January 2026. The latest November invoice removed the discount voucher line item prematurely.
+            </p>
+</div>
+<!-- Quantitative Comparison Panel -->
+<div class="bg-surface-container-low/70 rounded-xl p-3.5 border border-outline-variant/30 flex items-center divide-x divide-outline-variant/40 shrink-0">
+<div class="pr-5">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Billed Amount</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold tabular-nums mt-0.5">
+                $89.99 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ mo</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Nov 04, 2025</div>
+</div>
+<div class="px-5">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Promised Terms</div>
+<div class="font-headline-sm text-headline-sm text-secondary font-bold tabular-nums mt-0.5">
+                $65.00 <span class="font-body-sm text-body-sm font-normal text-on-surface-variant">/ mo</span>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate max-w-[150px]">Lock until Jan 2026</div>
+</div>
+<div class="pl-5 text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Net Variance</div>
+<div class="font-headline-sm text-headline-sm text-error font-bold tabular-nums mt-0.5">
+                +$24.99 <span class="font-body-sm text-body-sm font-normal text-error">/ mo</span>
+</div>
+<div class="font-label-sm text-label-sm text-error font-medium mt-0.5">Unexpected increase</div>
+</div>
+</div>
+</div>
+<!-- Bottom Meta & Actions Divider -->
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+              Contract #CF-88219 (Locked)
+            </span>
+<span class="">Matched against 4 previous statements</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" type="button">
+              Dismiss as Expected
+            </button>
+<button class="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/60 font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_download</span>
+<span class="">Dispute Summary</span>
+</button>
+<button class="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-xl bg-primary-container text-on-primary font-label-md text-label-md font-medium hover:bg-primary transition-all shadow-sm" type="button">
+<span class="">Review Details</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Discrepancy Card 2: Apex Mobile Care -->
+<article class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 shadow-sm overflow-hidden transition-all hover:border-outline-variant">
+<div class="p-5 lg:p-6">
+<div class="flex flex-col lg:flex-row lg:items-start justify-between gap-space-md">
+<!-- Header & Context -->
+<div class="flex-1 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5 mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-low text-secondary border border-outline-variant/40">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                Discount Verification Needed
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Wireless Family Plan</span>
+<span class="text-outline-variant">•</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface-variant font-mono">Invoice #APX-4109</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+              Apex Mobile Care — Auto-pay and paperless discount ($10.00/line) missing from statement
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-4xl leading-relaxed">
+              Enrolled agreement shows active auto-pay enrollment confirmed on Oct 12, but the statement dated Nov 01 reflects standard non-discounted pricing across 2 active mobile lines.
+            </p>
+</div>
+<!-- Quantitative Comparison Panel -->
+<div class="bg-surface-container-low/70 rounded-xl p-3.5 border border-outline-variant/30 flex items-center divide-x divide-outline-variant/40 shrink-0">
+<div class="pr-5">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Billed Amount</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold tabular-nums mt-0.5">
+                $165.00
+              </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Nov 01, 2025</div>
+</div>
+<div class="px-5">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Promised Terms</div>
+<div class="font-headline-sm text-headline-sm text-secondary font-bold tabular-nums mt-0.5">
+                $145.00
+              </div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5 truncate max-w-[150px]">With Auto-Pay enrolled</div>
+</div>
+<div class="pl-5 text-right">
+<div class="font-label-sm text-label-sm text-on-surface-variant font-medium">Net Variance</div>
+<div class="font-headline-sm text-headline-sm text-error font-bold tabular-nums mt-0.5">
+                +$20.00
+              </div>
+<div class="font-label-sm text-label-sm text-error font-medium mt-0.5">Unapplied discount</div>
+</div>
+</div>
+</div>
+<!-- Bottom Meta & Actions Divider -->
+<div class="mt-5 pt-4 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">receipt_long</span>
+              Confirmation #APX-CONF-128
+            </span>
+<span class="">2 lines affected (Lines ending in 8831, 8832)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 transition-colors" type="button">
+              Mark Resolved
+            </button>
+<button class="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-xl bg-surface-container-lowest border border-outline-variant/60 font-label-md text-label-md text-on-surface hover:bg-surface-container-low transition-colors shadow-sm" type="button">
+<span class="">Review Details</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Lower Section: 2-Column Balanced Architecture -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column: Upcoming Renewals -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary">update</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+          Upcoming Renewals
+        </h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Next 45 Days</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm flex flex-col divide-y divide-outline-variant/30 overflow-hidden">
+<!-- Item 1: StreamPulse Premier -->
+<div class="p-4 flex items-start gap-3.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 text-secondary mt-0.5">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">StreamPulse Premier</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface font-semibold tabular-nums">$19.99/mo</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="">Renews Nov 18, 2025</span>
+<span class="">•</span>
+<span class="truncate">Annual lock guarantee active</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-tertiary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="">Verified Rate Protection</span>
+</div>
+</div>
+</div>
+<!-- Item 2: Apex Cloud Backup 2TB -->
+<div class="p-4 flex items-start gap-3.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface mt-0.5">
+<span class="material-symbols-outlined text-[18px]">cloud</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Apex Cloud Backup 2TB</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface font-semibold tabular-nums">$9.99/mo</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="">Renews Nov 24, 2025</span>
+<span class="">•</span>
+<span class="truncate">Introductory rate expires next cycle</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-error font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[15px]">info</span>
+<span class="">Rate scheduled to adjust to $14.99/mo</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Metro Health Club -->
+<div class="p-4 flex items-start gap-3.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface mt-0.5">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">Metro Health Club</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface font-semibold tabular-nums">$65.00/mo</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="">Renews Dec 01, 2025</span>
+<span class="">•</span>
+<span class="truncate">Month-to-month agreement</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">notifications</span>
+<span class="">Requires 30-day notice for changes</span>
+</div>
+</div>
+</div>
+<!-- Item 4: CodeFlow Team Pro -->
+<div class="p-4 flex items-start gap-3.5 hover:bg-surface-container-low/40 transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center shrink-0 text-on-surface mt-0.5">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold truncate">CodeFlow Team Pro</span>
+<span class="font-mono-numeric text-mono-numeric text-on-surface font-semibold tabular-nums">$24.00/mo</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm mt-0.5">
+<span class="">Renews Dec 15, 2025</span>
+<span class="">•</span>
+<span class="truncate">Annual seat commitment</span>
+</div>
+<div class="mt-2 flex items-center gap-1.5 text-on-tertiary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="">Locked Contract Terms</span>
+</div>
+</div>
+</div>
+<!-- Footer Link -->
+<div class="p-3 bg-surface-container-low/30 text-center">
+<a class="font-label-md text-label-md text-secondary font-medium hover:underline inline-flex items-center gap-1" href="#">
+<span class="">View all 14 active subscriptions</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Recent Document Activity -->
+<div class="lg:col-span-7 flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface">history_toggle_off</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">
+          Recent Document Activity
+        </h2>
+</div>
+<div class="flex items-center gap-2">
+<button class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface px-2.5 py-1 rounded-lg bg-surface-container-low border border-outline-variant/30" type="button">
+          Filter: All (28)
+        </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm overflow-hidden flex flex-col justify-between flex-1">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50 border-b border-outline-variant/30">
+<th class="py-2.5 px-4 font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider">
+                Document / Merchant
+              </th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider">
+                Analyzed
+              </th>
+<th class="py-2.5 px-3 font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider">
+                Status
+              </th>
+<th class="py-2.5 px-4 font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider text-right">
+                Variance
+              </th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">CloudFiber_Nov2025_Bill.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Utility / Internet</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface-variant whitespace-nowrap">
+                Nov 05, 2025
+              </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-error-container/50 text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Discrepancy
+                </span>
+</td>
+<td class="py-3 px-4 text-right font-mono-numeric text-mono-numeric text-error font-semibold tabular-nums">
+                +$24.99/mo
+              </td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">picture_as_pdf</span>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">Apex_Wireless_Statement_1101.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mobile Service</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface-variant whitespace-nowrap">
+                Nov 02, 2025
+              </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold bg-surface-container-low text-secondary border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Needs Review
+                </span>
+</td>
+<td class="py-3 px-4 text-right font-mono-numeric text-mono-numeric text-error font-semibold tabular-nums">
+                +$20.00
+              </td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">receipt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">StreamPulse_Annual_Receipt.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Digital Media</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface-variant whitespace-nowrap">
+                Oct 28, 2025
+              </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-low text-on-tertiary-container border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  Match Verified
+                </span>
+</td>
+<td class="py-3 px-4 text-right font-mono-numeric text-mono-numeric text-on-surface-variant tabular-nums">
+                $19.99
+              </td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">verified</span>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">Electric_Tariff_Schedule_2025.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fixed Energy Tariff</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface-variant whitespace-nowrap">
+                Oct 20, 2025
+              </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-low text-on-tertiary-container border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  Rate Locked
+                </span>
+</td>
+<td class="py-3 px-4 text-right font-mono-numeric text-mono-numeric text-on-surface-variant tabular-nums">
+                $0.142/kWh
+              </td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-[18px] text-outline">description</span>
+<div class="flex flex-col min-w-0">
+<span class="font-medium text-on-surface truncate">Nordic_Gym_Agreement_2024.pdf</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Service Contract</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface-variant whitespace-nowrap">
+                Oct 15, 2025
+              </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full font-label-sm text-label-sm font-medium bg-surface-container-low text-on-tertiary-container border border-outline-variant/30">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                  Terms Match
+                </span>
+</td>
+<td class="py-3 px-4 text-right font-mono-numeric text-mono-numeric text-on-surface-variant tabular-nums">
+                $65.00
+              </td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer -->
+<div class="p-3 bg-surface-container-low/30 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+          Showing 5 of 28 analyzed documents
+        </span>
+<a class="font-label-md text-label-md text-secondary font-medium hover:underline inline-flex items-center gap-1" href="#">
+<span class="">View all documents in vault</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div></div></div></main></div>
+</body></html>

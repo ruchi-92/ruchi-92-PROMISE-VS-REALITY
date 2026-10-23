@@ -1,0 +1,6 @@
+{
+  "name": "Promise vs Reality — Verification Platform",
+  "description": "Automated contract verification, subscription dispute preparation, and billing discrepancy detection in one bank-grade secure vault.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
